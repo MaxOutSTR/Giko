@@ -1,0 +1,70 @@
+.icon{
+  vertical-align: middle;
+}
+.left-panel{
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+  height: 100%;
+}
+.nav-bar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 4%
+}
+.nav-bar--logo{
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.nav-bar--button{
+  box-sizing: border-box;
+  border: solid transparent 1px;
+  user-select: none;
+  background-color: white;
+  font-size: 1.2rem;
+  padding: 0.15em 0.5em 0.35em 0.5em;
+  border-radius: 30px;
+  box-sizing: border-box;
+
+  cursor: pointer;
+}
+.nav-bar--button:hover{
+  background-color: lightgray;
+  border-color: black;
+}
+.nav-bar--button:active{
+  background-color: grey;
+  color: white;
+
+}
+.landing-background{
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  background-color: #D7CFC9;
+  width: 100%;
+  height: 100%;
+}
+.langing-background-right{
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  right:0;
+  width: 55%;
+  height: 100%;
+  object-fit: cover;
+}
+.item-list-container{
+  padding: 10em;
+  text-align: right;
+  font-weight: 400;
+}
