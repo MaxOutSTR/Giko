@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
-
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+import bgRight from '../src/images/landing-bg-right.png'
+import './components/styles/main.css'
+import * as constants from './constants'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='landing-background'></div>
+      <img className='langing-background-right' src={bgRight} alt='bg-right' />
+      <NavBar />
+      <div className='left-panel'>
+        <ItemListContainer
+          greetingLines={constants.LANDING_GREETING_LINES}
+        />
+      </div>
     </div>
   );
 }
