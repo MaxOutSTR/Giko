@@ -1,5 +1,5 @@
 import { AiOutlineShoppingCart } from 'react-icons/ai'
-import './styles/main.css'
+import '../styles/main.css'
 
 const CartWidget = ({ onCartClick }) => {
   return (
