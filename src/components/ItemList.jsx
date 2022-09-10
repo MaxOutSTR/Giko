@@ -44,7 +44,10 @@ const ItemList = () => {
       {
         items.map((item, index) => {
           return (
-            <Item key={index} {...item} />
+            <>
+              <Item key={index} {...item} />
+              <hr />
+            </>
           );
         })
       }

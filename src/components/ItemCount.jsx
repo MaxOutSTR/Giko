@@ -12,18 +12,17 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       setCounter(counter + 1)
     }
   }
-  const handleAddCart = (value) => {
+  const handleAddCart = () => {
     onAdd(counter)
   }
   return (
-    <>
+    <div style={{ height: '2em', fontSize: '1rem', display: 'flex', justifyContent: 'flex-end' }}>
+      <button onClick={handleSubstract} style={{ height: '100%' }}><span><GrSubtractCircle /></span></button>
+      <button style={{ height: '100%', userSelect: 'none', pointerEvents: 'none' }}>{counter}</button>
+      <button onClick={handleAdd} style={{ height: '100%' }}><span><GrAddCircle /></span></button>
 
-      <button onClick={handleSubstract}><span><GrSubtractCircle /></span></button>
-      <span>{counter}</span>
-      <button onClick={handleAdd}><span><GrAddCircle /></span></button>
-
-      <button onClick={handleAddCart}>Add to cart</button>
-    </>
+      <button onClick={handleAddCart} style={{ userSelect: 'none', height: '100%' }}>Add to cart</button>
+    </div>
   );
 }
 export default ItemCount;
