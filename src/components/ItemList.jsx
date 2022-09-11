@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Item from "./Item";
-const ItemList = () => {
+const ItemList = ({ categoryId }) => {
   const itemsMock = [
     {
       id: 1,
@@ -8,7 +8,8 @@ const ItemList = () => {
       stock: 7,
       description: 'Just a regular office mouse',
       price: 2.99,
-      pictureUrl: 'https://d2ulnfq8we0v3.cloudfront.net/cdn/990386/media/catalog/product/cache/1/small_image/295x/040ec09b1e35df139433887a97daa66f/a/9/a989de43d315f8b05b1cecf57723eee4_10.jpg'
+      pictureUrl: 'https://d2ulnfq8we0v3.cloudfront.net/cdn/990386/media/catalog/product/cache/1/small_image/295x/040ec09b1e35df139433887a97daa66f/a/9/a989de43d315f8b05b1cecf57723eee4_10.jpg',
+      category: 1
     },
     {
       id: 2,
@@ -16,7 +17,8 @@ const ItemList = () => {
       stock: 4,
       description: 'Just a regular office keyboard',
       price: 5.99,
-      pictureUrl: 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MK2A3Z?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1628010524000'
+      pictureUrl: 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MK2A3Z?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1628010524000',
+      category: 1
     },
     {
       id: 3,
@@ -24,7 +26,8 @@ const ItemList = () => {
       stock: 6,
       description: 'Just regular office headphones',
       price: 16.49,
-      pictureUrl: 'https://www.addasound.com/uploads/image/20220517/14/inspire-16-bluetooth-headset.jpg'
+      pictureUrl: 'https://www.addasound.com/uploads/image/20220517/14/inspire-16-bluetooth-headset.jpg',
+      category: 2
     },
   ];
 
@@ -45,8 +48,21 @@ const ItemList = () => {
         items.map((item, index) => {
           return (
             <>
-              <Item key={index} {...item} />
-              <hr />
+              {
+                (categoryId) ?
+                  (item.category === parseInt(categoryId)) ?
+                    <>
+                      <Item key={index} {...item} />
+                      <hr />
+                    </>
+                    :
+                    ''
+                  :
+                  <>
+                    <Item key={index} {...item} />
+                    <hr />
+                  </>
+              }
             </>
           );
         })

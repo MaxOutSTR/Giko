@@ -3,21 +3,19 @@ import ItemListContainer from './components/ItemListContainer';
 import bgRight from '../src/images/landing-bg-right.png'
 import './styles/main.css'
 import * as constants from './constants'
+import ItemDetailContainer from './components/ItemDetailContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <NavBar />
-      <div className='main-page'>
-        <div className='left-panel'>
-          <ItemListContainer
-            greetingLines={constants.LANDING_GREETING_LINES}
-          />
-        </div>
-        <div className='right-panel'>
-          <img className='langing-background-right' src={bgRight} alt='bg-right' />
-        </div>
-      </div>
-    </div>
+      <Routes>
+        <Route path='/' element={<ItemListContainer />} />
+
+        <Route path='/category/:categoryId' element={<ItemListContainer />} />
+        <Route path='/item/:id' element={<ItemDetailContainer />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

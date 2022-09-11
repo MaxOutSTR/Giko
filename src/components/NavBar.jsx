@@ -1,5 +1,6 @@
 import '../styles/main.css'
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom'
 const NavBar = () => {
   const onModelsClick = () => {
     console.log('models');
@@ -13,7 +14,10 @@ const NavBar = () => {
   return (
     <>
       <div className="nav-bar">
-        <div className='nav-bar--logo'>GIK<span>&#333;</span></div>
+        <Link to={'/'}
+          className='nav-bar--logo' >
+          GIK<span>&#333;</span>
+        </Link>
         <div className='nav-bar--button' onClick={onModelsClick}>models</div>
         <div className='nav-bar--button' onClick={onLoginClick}>login</div>
         <CartWidget onCartClick={onCartClick} />
