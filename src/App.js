@@ -1,9 +1,7 @@
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import bgRight from '../src/images/landing-bg-right.png'
-import './styles/main.css'
-import * as constants from './constants'
-import ItemDetailContainer from './components/ItemDetailContainer';
+import React from 'react';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemList/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 function App() {
   return (
@@ -11,8 +9,6 @@ function App() {
       <NavBar />
       <Routes>
         <Route path='/' element={<ItemListContainer />} />
-
-        <Route path='/category/:categoryId' element={<ItemListContainer />} />
         <Route path='/item/:id' element={<ItemDetailContainer />} />
       </Routes>
     </BrowserRouter>

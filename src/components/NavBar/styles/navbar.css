@@ -1,0 +1,14 @@
+.nav-bar{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 3em;
+}
+.button {
+  background-color: #FFF;
+  border: 1px solid #000;
+  border-radius: 5em;
+  padding: 0.25em 0.5em;
+
+}

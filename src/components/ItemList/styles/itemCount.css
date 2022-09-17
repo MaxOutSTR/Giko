@@ -1,0 +1,19 @@
+.item-count-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 1.5em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.item{
+  height: 100%;
+}
+.item--count{
+  width: 4em;
+}
+.item--add-to-cart{
+  flex-grow: 1;
+}
