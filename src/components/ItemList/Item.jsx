@@ -17,7 +17,7 @@ const Item = ({ id, title, stock, description, price, pictureUrl }) => {
           <p><b>Stock: </b>{stock}</p>
           <p><b>Price: </b>{price}</p>
         </div>
-        <ItemCount initial={1} onAdd={handleAdd} stock={stock} />
+        <ItemCount initial={1} onAdd={handleAdd} stock={stock} item={{ id, title, stock, description, price, pictureUrl }} />
       </div>
     </div>
   )

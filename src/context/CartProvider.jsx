@@ -5,7 +5,7 @@ const CartProvider = ({ defaultValue = [], children }) => {
 
   const addItem = (item, quantity) => {
     const newCart = cart;
-    setCart(...newCart, { item, quantity })
+    setCart([...newCart, { item, quantity }])
   }
 
   const removeItem = (itemId) => {

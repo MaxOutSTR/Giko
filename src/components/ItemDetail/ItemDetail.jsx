@@ -1,12 +1,8 @@
 import './styles/itemDetail.css'
 import ItemCount from '../Common/ItemCount'
-import CartContext from '../../context/CartContext'
-import { useContext } from 'react'
 const ItemDetail = ({ item }) => {
-  const cartContext = useContext(CartContext)
   const handleAdd = (count) => {
-    cartContext.addItem(item, count)
-    console.log(cartContext.cart)
+    alert(`Added ${count} of ${item.title}`)
   }
   return (
     <div className="item-detail">
@@ -18,7 +14,7 @@ const ItemDetail = ({ item }) => {
               <h1>{item.title}</h1>
               <p>{item.description}</p>
               <h3>${item.price}</h3>
-              <ItemCount stock={item.stock} initial={1} onAdd={handleAdd} />
+              <ItemCount stock={item.stock} initial={1} onAdd={handleAdd} item={item} />
             </div>
           </>
           :
