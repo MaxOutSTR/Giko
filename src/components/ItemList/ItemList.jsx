@@ -4,7 +4,7 @@ import { itemsMock } from "../../mocks"
 import './styles/itemList.css'
 const ItemList = () => {
   const itemPromise = new Promise((resolve, reject) => {
-    setTimeout(() => { resolve(itemsMock) }, 2000)
+    setTimeout(() => { resolve(itemsMock) }, 1000)
   })
 
   const [items, setItems] = useState([]);

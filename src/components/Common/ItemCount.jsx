@@ -1,6 +1,8 @@
+import { useContext } from "react";
 import { useState } from "react";
 import { GrAddCircle, GrSubtractCircle } from 'react-icons/gr'
 import './styles/itemCount.css'
+import CartContext from "../../context/CartContext";
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [counter, setCounter] = useState(initial)
   const handleSubstract = () => {

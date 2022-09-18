@@ -11,9 +11,9 @@ const ItemDetailContainer = () => {
 
     const itemOb = itemsMock.find(x => x.id === parseInt(id));
     if (itemOb) {
-      setTimeout(() => { resolve(itemOb) }, 2000)
+      setTimeout(() => { resolve(itemOb) }, 1000)
     } else {
-      setTimeout(() => { resolve('') }, 2000)
+      setTimeout(() => { resolve('') }, 1000)
     }
 
   })
