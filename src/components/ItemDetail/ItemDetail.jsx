@@ -1,9 +1,19 @@
 import './styles/itemDetail.css'
 import ItemCount from '../Common/ItemCount'
+import { useContext, useState } from 'react'
+import CartContext from '../../context/CartContext'
+import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 const ItemDetail = ({ item }) => {
+  const [added, setAdded] = useState(false)
+  const cartContext = useContext(CartContext)
   const handleAdd = (count) => {
     alert(`Added ${count} of ${item.title}`)
   }
+
+  useEffect(() => {
+    setAdded(cartContext.isInCart(item.id))
+  }, [item])
   return (
     <div className="item-detail">
       {
@@ -14,7 +24,15 @@ const ItemDetail = ({ item }) => {
               <h1>{item.title}</h1>
               <p>{item.description}</p>
               <h3>${item.price}</h3>
-              <ItemCount stock={item.stock} initial={1} onAdd={handleAdd} item={item} />
+              {
+                (added) ?
+                  <>
+                    <Link to={'/cart'}>Terminar compra</Link>
+                  </>
+                  :
+                  <ItemCount stock={item.stock} initial={1} onAdd={handleAdd} item={item} />
+              }
+
             </div>
           </>
           :
