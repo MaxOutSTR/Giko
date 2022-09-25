@@ -19,6 +19,7 @@ const ItemCount = ({ stock, initial, onAdd, item }) => {
   const handleAddCart = () => {
     onAdd(counter)
     cartContext.addItem(item, counter)
+    setCounter(initial)
   }
   return (
     <div className={'item-count-container'}>

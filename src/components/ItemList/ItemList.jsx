@@ -1,30 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Item from "./Item";
-import { itemsMock } from "../../mocks"
 import './styles/itemList.css'
-import Loader from "../Common/Loader";
-const ItemList = () => {
-  const itemPromise = new Promise((resolve, reject) => {
-    setTimeout(() => { resolve(itemsMock) }, 1000)
-  })
-
-  const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(false)
-
-  useEffect(() => {
-    setLoading(true)
-    itemPromise.then((res) => {
-      setItems(res)
-      setLoading(false)
-    })
-  }, [])
-
+const ItemList = ({ items, text = '' }) => {
   return (
-    (loading) ?
-      <div style={{ position: 'absolute', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <Loader />
-      </div>
-      :
+    <div>
+      <h1 style={{ paddingLeft: '1em' }} >{text}</h1>
       <div className={'item-list-container'}>
         {
           items.map((item) => {
@@ -37,6 +17,7 @@ const ItemList = () => {
           })
         }
       </div>
+    </div>
   );
 }
 export default ItemList;

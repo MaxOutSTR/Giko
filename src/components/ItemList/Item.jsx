@@ -1,9 +1,9 @@
 import ItemCount from "../Common/ItemCount";
 import { Link } from "react-router-dom";
 import './styles/item.css'
-const Item = ({ id, title, stock, description, price, pictureUrl }) => {
+const Item = ({ id, name, stock, description, price, pictureUrl }) => {
   const handleAdd = (count) => {
-    alert(`Added ${count} of ${title}`)
+    alert(`Added ${count} of ${name}`)
   }
   return (
     <div>
@@ -12,12 +12,12 @@ const Item = ({ id, title, stock, description, price, pictureUrl }) => {
       </Link>
       <div>
         <div className={'item-info'}>
-          <h3>{title}</h3>
+          <h3>{name}</h3>
           <p className={'item-description'}>{description}</p>
           <p><b>Stock: </b>{stock}</p>
           <p><b>Price: </b>{price}</p>
         </div>
-        <ItemCount initial={1} onAdd={handleAdd} stock={stock} item={{ id, title, stock, description, price, pictureUrl }} />
+        <ItemCount initial={1} onAdd={handleAdd} stock={stock} item={{ id, name, stock, description, price, pictureUrl }} />
       </div>
     </div>
   )

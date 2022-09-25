@@ -1,0 +1,21 @@
+.dropdown-options-container{
+  position: absolute;
+  background-color: #FFF;
+  margin-top: 0.5em;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border: 1px solid #000;
+}
+.dropdown-option{
+  box-sizing: border-box;
+  padding: 0.5em 2em;
+  color: #000;
+}
+.dropdown-option:hover{
+  font-weight: 600;
+  background-color: #CCC;
+}
+.dropdown-option:active{
+  font-weight: 700;
+  background-color: #BBB;
+}

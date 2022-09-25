@@ -1,14 +1,20 @@
 .loader-container{
-  position: relative;
+    position: relative;
+    height: 340px;
+    width: 340px;
 }
 
 .loader{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-animation:spin 1.5s linear infinite;
-  -moz-animation:spin 1.5s linear infinite;
-  animation:spin 1.5s linear infinite;
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    margin-top: -120px;
+    margin-left: -120px;
+    top: 50%;
+    left: 50%;
+    -webkit-animation:spin 1.5s linear infinite;
+    -moz-animation:spin 1.5s linear infinite;
+    animation:spin 1.5s linear infinite;
 }
 @-moz-keyframes spin { 
     100% { -moz-transform: rotate(-360deg); } 

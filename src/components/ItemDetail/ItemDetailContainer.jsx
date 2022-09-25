@@ -3,34 +3,31 @@ import { useState } from "react"
 import { useEffect } from "react"
 import ItemDetail from "./ItemDetail"
 import { useParams } from 'react-router-dom'
-import { itemsMock } from "../../mocks"
 import Loader from '../Common/Loader'
+import CenterContainer from "../Common/CenterContainer"
 import './styles/itemDetailContainer.css'
+import { doc, getDoc, getFirestore } from "firebase/firestore"
 const ItemDetailContainer = () => {
   const { id } = useParams()
-  const getItem = new Promise((resolve, reject) => {
-
-    const itemOb = itemsMock.find(x => x.id === parseInt(id));
-    if (itemOb) {
-      setTimeout(() => { resolve(itemOb) }, 1000)
-    } else {
-      setTimeout(() => { resolve('') }, 1000)
-    }
-  })
   const [item, setItem] = useState({})
   const [loading, setLoading] = useState(false);
+
   useEffect(() => {
+    const db = getFirestore();
+    const productRef = doc(db, 'products', id);
     setLoading(true)
-    getItem.then((res) => {
-      setItem(res)
-      setLoading(false)
+    getDoc(productRef).then((snapshot) => {
+      if (snapshot.exists) {
+        setItem({ id: snapshot.id, ...snapshot.data() })
+        setLoading(false)
+      }
     })
   }, [])
   return (
     (loading) ?
-      <div style={{ position: 'absolute', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <CenterContainer>
         <Loader />
-      </div>
+      </CenterContainer>
       :
       <div className={'item-detail-container'}>
         <ItemDetail item={item} />

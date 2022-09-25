@@ -9,6 +9,7 @@ const ItemDetail = ({ item }) => {
   const cartContext = useContext(CartContext)
   const handleAdd = (count) => {
     alert(`Added ${count} of ${item.title}`)
+    setAdded(true)
   }
 
   useEffect(() => {
