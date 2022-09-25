@@ -19,7 +19,7 @@ const Cart = () => {
               {
                 cartContext.cart.map((element) => {
                   return (
-                    <CartItem item={element.item} quantity={element.quantity}
+                    <CartItem key={element.item.id} item={element.item} quantity={element.quantity}
                       removeItem={cartContext.removeItem}
                     />
                   )

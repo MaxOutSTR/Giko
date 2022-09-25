@@ -14,7 +14,7 @@ const Dropdown = ({ label, options, drop }) => {
             {
               options.map((option) => {
                 return (
-                  <Link to={`/category/${option.id}`} style={{ textDecoration: 'none' }} onClick={() => { drop = false }}>
+                  <Link key={option.id} to={`/category/${option.id}`} style={{ textDecoration: 'none' }} onClick={() => { drop = false }}>
                     <li className='dropdown-option'>
                       {option.name}
                     </li>
