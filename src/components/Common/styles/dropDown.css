@@ -1,3 +1,6 @@
+.dropdown-container {
+  z-index: 10;
+}
 .dropdown-options-container{
   position: absolute;
   background-color: #FFF;

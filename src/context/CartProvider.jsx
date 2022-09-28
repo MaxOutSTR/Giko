@@ -31,6 +31,7 @@ const CartProvider = ({ defaultValue = [], children }) => {
   }
   const clear = () => {
     setCart([]);
+    setCartSize(0)
   }
 
   const isInCart = (itemId) => {

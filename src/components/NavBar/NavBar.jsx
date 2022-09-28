@@ -42,14 +42,9 @@ const NavBar = () => {
         <Link className='nav-bar--button' to={'/'}>
           <div>login</div>
         </Link>
-        {
-          (cartContext.cartSize === 0) ?
-            <></>
-            :
-            <Link className='nav-bar--button' to={'/cart'}>
-              <CartWidget />
-            </Link>
-        }
+        <Link className='nav-bar--button' to={'/cart'}>
+          <CartWidget />
+        </Link>
       </div>
     </>
   )
