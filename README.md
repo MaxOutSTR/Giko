@@ -1,4 +1,17 @@
-# Getting Started with Create React App
+# Giko
+This is just a really simple e-commerce app built using React.js and Firebase's Firestore to manage and store data.
+<br/>
+The app allows the user to browse the shop's items and see their detail (all items or sorted by categoty). After that the user can add a certain quantity to the cart and keep looking for more items to add.
+<br />
+Finally, at any moment, the user can access their shopping cart by clicking on the button in the navbar. That will show the current items that are inside the cart. Next, the user must fill some contact info and place the order. A message will pop-up and will show a success message and the order code, which the user can copy and proceed to browse more items if he wishes to.
+
+## External Libraries
+This project only uses 1 external library called **react-icons**. Everything else was just JSX and CSS styling.
+
+## Try it out
+If you'd like to try this app please feel free to contact me through Github and I'll enable the firestore db.
+<br/>
+# Create-react-app Info
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
