@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import CenterContainer from '../Common/CenterContainer'
 import Loader from '../Common/Loader'
-import { collection, doc, limit, getDoc, getDocs, query, getFirestore, where } from 'firebase/firestore'
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false)

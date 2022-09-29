@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Item from "./Item";
 import './styles/itemList.css'
 const ItemList = ({ items, text = '' }) => {
