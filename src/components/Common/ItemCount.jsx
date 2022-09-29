@@ -20,13 +20,23 @@ const ItemCount = ({ stock, initial, onAdd, item }) => {
     onAdd(counter)
     cartContext.addItem(item, counter)
     setCounter(initial)
+
   }
   return (
     <div className={'item-count-container'}>
-      <button className={'item'} onClick={handleSubstract}><span><GrSubtractCircle /></span></button>
-      <button className={'item item--count'}>{counter}</button>
-      <button className={'item'} onClick={handleAdd}><span><GrAddCircle /></span></button>
-      <button className={'item item--add-to-cart'} onClick={handleAddCart}>Add to cart</button>
+      <button className={'item item--controller'} onClick={handleSubstract}>
+        <span className={'icon--span'} ><GrSubtractCircle style={{ display: 'block', margin: '0 auto' }} /></span>
+      </button>
+
+      <span className={'item item--count'}>{counter}</span>
+
+      <button className={'item item--controller'} onClick={handleAdd}>
+        <span className={'icon--span'} ><GrAddCircle /></span>
+      </button>
+
+      <button className={'item item--add-to-cart'} onClick={handleAddCart} >
+        Add to cart
+      </button>
     </div>
   );
 }

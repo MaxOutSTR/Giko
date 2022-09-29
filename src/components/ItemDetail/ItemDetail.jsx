@@ -8,7 +8,7 @@ const ItemDetail = ({ item }) => {
   const [added, setAdded] = useState(false)
   const cartContext = useContext(CartContext)
   const handleAdd = (count) => {
-    alert(`Added ${count} of ${item.title}`)
+    alert(`Added ${count} of ${item.name}`)
     setAdded(true)
   }
 
@@ -28,7 +28,9 @@ const ItemDetail = ({ item }) => {
               {
                 (added) ?
                   <>
-                    <Link to={'/cart'}>Terminar compra</Link>
+                    <Link to={'/cart'}>
+                      <button>Proceed to Purchase</button>
+                    </Link>
                   </>
                   :
                   <ItemCount stock={item.stock} initial={1} onAdd={handleAdd} item={item} />

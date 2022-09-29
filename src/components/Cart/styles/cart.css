@@ -1,4 +1,29 @@
 .cart-container{
   padding: 2em;
   position: relative;
+  width: 50%;
+}
+
+.cart-total-price{
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.cart-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart-form--label{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+  font-weight: 500;
+}
+.cart-form--label input{
+  font-size: 1em;
 }

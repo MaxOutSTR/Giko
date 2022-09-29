@@ -1,0 +1,25 @@
+.order-placed--container{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3em;
+  background-color: #fff;
+}
+
+.order-placed--text{
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.order-placed--id{
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 0.3em;
+  font-size: 1.4em;
+
+  
+}
+.order-placed--mesage{
+  height: fit-content;
+}

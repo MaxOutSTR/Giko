@@ -11,9 +11,24 @@
 .item{
   height: 100%;
 }
+
+.item--controller{
+  font-size: 1em;
+  width: 2em;
+}
+
 .item--count{
-  width: 4em;
+  box-sizing: border-box;
+  width: 2em;
+  text-align: center;
+  user-select: none;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
 }
 .item--add-to-cart{
   flex-grow: 1;
+}
+
+.icon--span{
 }

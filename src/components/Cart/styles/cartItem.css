@@ -5,7 +5,8 @@
   height: 6em;
   margin: 1em 0;
   border: 1px solid #000;
-  width: 60%;
+  background-color: #fff;
+  width: 100%;
 }
 .cart-item-image{
   height: 100%;

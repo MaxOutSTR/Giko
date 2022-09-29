@@ -36,12 +36,9 @@ const NavBar = () => {
         <Link to={'/'}>
           <img alt='logo' src={logo}></img>
         </Link>
-        <div className='nav-bar--button' onClick={() => { setDropCategories(!dropCategories) }}>
-          <Dropdown label={'categories'} options={categories} drop={dropCategories} />
+        <div className='nav-bar--button' onMouseEnter={() => { setDropCategories(true) }}>
+          <Dropdown label={'categories'} options={categories} drop={dropCategories} setDrop={setDropCategories} />
         </div>
-        <Link className='nav-bar--button' to={'/'}>
-          <div>login</div>
-        </Link>
         <Link className='nav-bar--button' to={'/cart'}>
           <CartWidget />
         </Link>
