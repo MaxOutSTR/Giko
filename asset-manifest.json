@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Giko/static/css/main.e7024ec6.css",
-    "main.js": "/Giko/static/js/main.3c5ce9c0.js",
+    "main.js": "/Giko/static/js/main.0b79731f.js",
     "static/js/787.f68c4e44.chunk.js": "/Giko/static/js/787.f68c4e44.chunk.js",
     "static/media/loading-spinner.png": "/Giko/static/media/loading-spinner.4cfab7b9bbf0711410a0.png",
     "index.html": "/Giko/index.html",
     "main.e7024ec6.css.map": "/Giko/static/css/main.e7024ec6.css.map",
-    "main.3c5ce9c0.js.map": "/Giko/static/js/main.3c5ce9c0.js.map",
+    "main.0b79731f.js.map": "/Giko/static/js/main.0b79731f.js.map",
     "787.f68c4e44.chunk.js.map": "/Giko/static/js/787.f68c4e44.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e7024ec6.css",
-    "static/js/main.3c5ce9c0.js"
+    "static/js/main.0b79731f.js"
   ]
 }
