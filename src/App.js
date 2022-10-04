@@ -9,7 +9,7 @@ import Cart from './components/Cart/Cart'
 function App() {
   return (
     <CartProvider defaultValue={[]}>
-      <BrowserRouter>
+      <BrowserRouter basename='/Giko'>
         <NavBar />
         <Routes>
           <Route path='/' element={<ItemListContainer />} />
